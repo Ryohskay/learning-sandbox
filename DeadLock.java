@@ -83,20 +83,6 @@ public static boolean move(Player plr) {
 	}
 }
 
-// Room centric approach
-public static boolean checkDeadLock(Room[] rooms) {
-	for (room : rooms) {
-		else if (room.player != null && room.player.getDestination().getOccupancy() == false) {
-			Room destination = room.player.getDestination()
-			destination.markOccupied();
-			Player moving_player = room.getPlayer();
-			destination.setPlayer(moving_player);
-			destination.markMoved();
-			room.clear();
-		}
-	}
-}
-
 public static void DeadLock() {
 	public static void main(String[] args) {
 		
